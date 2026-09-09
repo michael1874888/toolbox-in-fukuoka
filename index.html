@@ -39,6 +39,7 @@
               <span class="meta-divider"></span>
               <span>7 天 6 夜</span>
             </div>
+            <p id="trip-status" class="trip-status" aria-live="polite"></p>
           </div>
           <div class="hero-art" aria-hidden="true">
             <div class="sun-disc"></div>
@@ -100,9 +101,8 @@
               <article class="info-card">
                 <div class="card-kicker"><span class="icon-badge mint-bg">⌂</span><span>STAYS</span></div>
                 <h3>兩段住宿</h3>
-                <div class="stay-item"><span class="stay-date">09.19—21</span><div><strong>今泉</strong><p>前兩晚，方便天神購物與用餐。</p></div></div>
-                <div class="stay-item"><span class="stay-date">09.21—25</span><div><strong>御供所町 12-1</strong><p>17:00 入住 · 11:00 退房<br />靠近祇園、櫛田神社與博多舊市區。</p></div></div>
-                <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=12-1+Gokushocho+Fukuoka" target="_blank" rel="noreferrer">開啟住宿地圖 ↗</a>
+                <div class="stay-item"><span class="stay-date">09.19—21</span><div><strong>今泉</strong><p>前兩晚，方便天神購物與用餐。完整地址以訂房確認單為準。</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Imaizumi+Fukuoka" target="_blank" rel="noreferrer">開啟今泉地圖 ↗</a></div></div>
+                <div class="stay-item"><span class="stay-date">09.21—25</span><div><strong>御供所町 12-1</strong><p>17:00 入住 · 11:00 退房<br />〒812-0036 福岡県福岡市博多区御供所町12-1</p><div class="info-actions"><button class="copy-button" type="button" data-copy="福岡県福岡市博多区御供所町12-1" data-copy-label="御供所町地址">複製日文地址</button><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=12-1+Gokushocho+Fukuoka" target="_blank" rel="noreferrer">開啟地圖 ↗</a></div></div></div>
               </article>
 
               <article class="info-card">
@@ -113,11 +113,11 @@
                 <a class="text-link" href="https://www.jrkyushu.co.jp/english/pdf/20231014_teburabaggage.pdf" target="_blank" rel="noreferrer">行李服務說明 ↗</a>
               </article>
 
-              <article class="info-card info-card-wide route-card">
-                <div class="card-kicker"><span class="icon-badge yellow-bg">↗</span><span>ROUTE LOGIC</span></div>
-                <h3>這趟旅程的移動節奏</h3>
-                <div class="route-steps"><div><b>01</b><span>城市步行<br /><small>天神・博多</small></span></div><i></i><div><b>02</b><span>海岸慢遊<br /><small>糸島</small></span></div><i></i><div><b>03</b><span>遠方一日<br /><small>門司港・柳川</small></span></div></div>
-                <p class="card-note">兩組方案可以分開選擇：第 3 天與第 4 天各自預設 A，不會互相覆蓋。</p>
+              <article class="info-card info-card-wide ticket-card">
+                <div class="card-kicker"><span class="icon-badge yellow-bg">▢</span><span>BEFORE YOU LEAVE</span></div>
+                <h3>出發前只要確認這三件事</h3>
+                <ol class="compact-list"><li>9/21 博多站人工行李寄放服務是否照常。</li><li>9/22 糸島 West Coast Liner 假日班表；若選 B 則完成租車／包車。</li><li>柳川遊船與西鐵票券的當日接待時間。</li></ol>
+                <p class="card-note">其他事情留給 Google Maps 與現場彈性，不把 APP 塞成旅遊百科。</p>
               </article>
             </div>
           </section>
@@ -130,7 +130,7 @@
           <section id="tools-view" class="view" role="tabpanel" hidden>
             <div class="section-heading"><div><p class="eyebrow">SMALL HELPERS</p><h2>旅途小工具</h2></div></div>
             <div class="tools-grid">
-              <article class="tool-card currency-tool"><div class="card-kicker"><span class="icon-badge coral-bg">¥</span><span>QUICK CONVERTER</span></div><h3>日圓小算盤</h3><p>輸入日圓，快速抓一個台幣概念值。</p><label for="yen-input">日圓 JPY</label><input id="yen-input" type="number" inputmode="decimal" value="1000" min="0" /><div class="conversion-result">約 <strong id="twd-result">218</strong> TWD <small>以 0.218 粗估，可自行調整</small></div></article>
+              <article class="tool-card currency-tool"><div class="card-kicker"><span class="icon-badge coral-bg">¥</span><span>QUICK CONVERTER</span></div><h3>日圓小算盤</h3><p>輸入金額，快速抓一個台幣概念值。</p><div class="currency-fields"><div><label for="yen-input">日圓 JPY</label><input id="yen-input" type="number" inputmode="decimal" value="1000" min="0" /></div><div><label for="rate-input">1 JPY ≈ TWD</label><input id="rate-input" type="number" inputmode="decimal" value="0.218" min="0" step="0.001" /></div></div><div class="conversion-result">約 <strong id="twd-result">218</strong> TWD <small id="rate-caption">手動匯率會保存在這台裝置</small></div></article>
               <article class="tool-card"><div class="card-kicker"><span class="icon-badge mint-bg">↗</span><span>LIVE LINKS</span></div><h3>快速開啟</h3><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Hakata+Station+Fukuoka" target="_blank" rel="noreferrer"><span>博多站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Gion+Station+Fukuoka" target="_blank" rel="noreferrer"><span>祇園站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Futamigaura+Fukuoka" target="_blank" rel="noreferrer"><span>二見ヶ浦地圖</span><b>↗</b></a></article>
               <article class="tool-card plan-summary"><div class="card-kicker"><span class="icon-badge blue-bg">A/B</span><span>ACTIVE PLANS</span></div><h3>目前選擇</h3><div id="active-plan-summary"></div><p class="card-note">回到「行程」即可切換兩組方案。</p></article>
             </div>

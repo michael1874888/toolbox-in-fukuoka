@@ -34,8 +34,28 @@ const checklistItems = [
   ['下載離線地圖、準備 IC 卡與行動電源', 'ESSENTIAL']
 ];
 
+const tripDates = { start: '2026-09-19', end: '2026-09-25' };
+
+function taipeiDate() {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit'
+  }).formatToParts(new Date()).reduce((result, part) => ({ ...result, [part.type]: part.value }), {});
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+function getTripContext() {
+  const today = taipeiDate();
+  if (today < tripDates.start) {
+    const days = Math.round((Date.parse(`${tripDates.start}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86400000);
+    return { phase: 'before', label: `距離出發 ${days} 天` };
+  }
+  if (today > tripDates.end) return { phase: 'after', label: '旅程已結束 · 行程保留作為紀錄' };
+  return { phase: 'during', day: Number(today.slice(-2)) - 18, label: `旅程進行中 · 今天是 Day ${Number(today.slice(-2)) - 18}` };
+}
+
+const initialTripContext = getTripContext();
 const state = {
-  day: Number(localStorage.getItem('fukuoka-active-day') || 1),
+  day: initialTripContext.phase === 'during' ? initialTripContext.day : Number(localStorage.getItem('fukuoka-active-day') || 1),
   plans: { 3: localStorage.getItem('fukuoka-plan-3') || 'A', 4: localStorage.getItem('fukuoka-plan-4') || 'A' },
   view: 'itinerary'
 };
@@ -49,6 +69,7 @@ function renderDayTabs() {
       <small>${data.date}</small><strong>Day ${day}</strong>${data.plans ? '<span class="plan-dot" aria-label="有兩組方案"></span>' : ''}
     </button>`).join('');
   $$('.day-tab').forEach((button) => button.addEventListener('click', () => { state.day = Number(button.dataset.day); localStorage.setItem('fukuoka-active-day', state.day); renderDayTabs(); renderDay(); }));
+  requestAnimationFrame(() => $('.day-tab.active')?.scrollIntoView({ block: 'nearest', inline: 'center' }));
 }
 
 function planSelector(day, data) {
@@ -56,11 +77,22 @@ function planSelector(day, data) {
   return `<div class="plan-section"><div class="plan-heading"><h4>今天有兩種走法</h4><small>預設顯示 A，可自行切換</small></div><div class="plan-switch">${Object.entries(data.plans).map(([key, plan]) => `<button class="plan-button ${selected === key ? 'active' : ''}" data-plan-day="${day}" data-plan="${key}"><span class="plan-letter">${key}</span><span><strong>${plan.name}</strong><small>${plan.short}</small></span></button>`).join('')}</div><div class="plan-note"><b>NOTE</b><span>${data.plans[selected].note}</span></div></div>`;
 }
 
+function mapLinkFor(title) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${title} 福岡`)}`;
+}
+
+function scheduleItem([time, title, description, link]) {
+  const isMap = link?.includes('google.com/maps');
+  const mapLink = isMap ? link : mapLinkFor(title);
+  const officialLink = link && !isMap ? `<a class="route-link subtle" href="${link}" target="_blank" rel="noreferrer">相關資訊 ↗</a>` : '';
+  return `<div class="schedule-item"><div class="schedule-time" data-time="${time}"></div><div class="schedule-content"><strong>${title}</strong><p>${description}</p><div class="schedule-actions"><a class="route-link" href="${mapLink}" target="_blank" rel="noreferrer">開啟地圖 ↗</a>${officialLink}</div></div></div>`;
+}
+
 function renderDay() {
   const data = itinerary[state.day];
   const selectedPlan = data.plans ? data.plans[state.plans[state.day]] : data;
   const schedule = selectedPlan.schedule || data.schedule;
-  $('#day-content').innerHTML = `<article class="day-shell"><header class="day-banner"><div><span class="day-number">${data.date} · ${data.theme}</span><h3>${data.title}</h3><p>${data.subtitle}</p></div><span class="day-badge">${data.badge}</span></header>${data.plans ? planSelector(state.day, data) : ''}<div class="schedule">${schedule.map(([time, title, description, link]) => `<div class="schedule-item"><div class="schedule-time" data-time="${time}"></div><div class="schedule-content"><strong>${title}</strong><p>${description}</p>${link ? `<a href="${link}" target="_blank" rel="noreferrer">查看相關地圖／資訊 ↗</a>` : ''}</div></div>`).join('')}</div><footer class="day-footer">${(data.tips || []).map(([label, text]) => `<div class="footer-tip"><small>${label}</small><strong>${label === 'RECOMMEND' || label === 'DECISION' ? '目前預設：A' : '記得留意'}</strong><p>${text}</p></div>`).join('')}</footer></article>`;
+  $('#day-content').innerHTML = `<article class="day-shell"><header class="day-banner"><div><span class="day-number">${data.date} · ${data.theme}</span><h3>${data.title}</h3><p>${data.subtitle}</p></div><span class="day-badge">${data.badge}</span></header>${data.plans ? planSelector(state.day, data) : ''}<div class="schedule">${schedule.map(scheduleItem).join('')}</div><footer class="day-footer">${(data.tips || []).map(([label, text]) => `<div class="footer-tip"><small>${label}</small><strong>${label === 'RECOMMEND' || label === 'DECISION' ? '目前預設：A' : '記得留意'}</strong><p>${text}</p></div>`).join('')}</footer></article>`;
   $$('.plan-button').forEach((button) => button.addEventListener('click', () => { const day = Number(button.dataset.planDay); state.plans[day] = button.dataset.plan; localStorage.setItem(`fukuoka-plan-${day}`, button.dataset.plan); renderDay(); renderPlanSummary(); showToast(`第 ${day} 天已切換為 ${button.dataset.plan} 方案`); }));
 }
 
@@ -75,17 +107,55 @@ function updateChecklistProgress() { const count = $$('#checklist input:checked'
 
 function renderPlanSummary() { $('#active-plan-summary').innerHTML = `<div class="active-plan-row"><span>第 3 天</span><strong>${state.plans[3]} · ${itinerary[3].plans[state.plans[3]].name}</strong></div><div class="active-plan-row"><span>第 4 天</span><strong>${state.plans[4]} · ${itinerary[4].plans[state.plans[4]].name}</strong></div>`; }
 
+function renderTripStatus() {
+  const context = getTripContext();
+  $('#trip-status').textContent = context.label;
+  $('#trip-status').dataset.phase = context.phase;
+}
+
+async function copyText(text, label) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const input = document.createElement('textarea');
+    input.value = text;
+    input.style.position = 'fixed';
+    input.style.opacity = '0';
+    document.body.append(input);
+    input.select();
+    document.execCommand('copy');
+    input.remove();
+  }
+  showToast(`已複製${label}`);
+}
+
+function updateCurrency() {
+  const rate = Number($('#rate-input').value) || 0;
+  const yen = Number($('#yen-input').value) || 0;
+  $('#twd-result').textContent = Math.round(yen * rate).toLocaleString();
+  $('#rate-caption').textContent = `1 JPY ≈ ${rate || 0} TWD · 已儲存在這台裝置`;
+}
+
 function switchView(view) {
   state.view = view;
   $$('.view-tab, .bottom-nav-item').forEach((button) => { const active = button.dataset.view === view; button.classList.toggle('active', active); if (button.classList.contains('view-tab')) button.setAttribute('aria-selected', active); });
   $$('.view').forEach((section) => { const active = section.id === `${view}-view`; section.classList.toggle('active', active); section.hidden = !active; });
-  window.scrollTo({ top: document.querySelector('.view-tabs').offsetTop - 18, behavior: 'smooth' });
+  window.scrollTo({ top: $('#top').offsetTop, behavior: 'smooth' });
 }
 
 function showToast(message) { const toast = $('#toast'); toast.textContent = message; toast.classList.add('show'); clearTimeout(window.__toast); window.__toast = setTimeout(() => toast.classList.remove('show'), 2400); }
 
 $$('[data-view]').forEach((button) => button.addEventListener('click', () => switchView(button.dataset.view)));
-$('#yen-input').addEventListener('input', (event) => { $('#twd-result').textContent = Math.round((Number(event.target.value) || 0) * 0.218).toLocaleString(); });
+$$('[data-copy]').forEach((button) => button.addEventListener('click', () => copyText(button.dataset.copy, button.dataset.copyLabel)));
+$('#rate-input').value = localStorage.getItem('fukuoka-exchange-rate') || $('#rate-input').value;
+$('#yen-input').addEventListener('input', updateCurrency);
+$('#rate-input').addEventListener('input', (event) => { localStorage.setItem('fukuoka-exchange-rate', event.target.value); updateCurrency(); });
 
-renderDayTabs(); renderDay(); renderChecklist(); renderPlanSummary();
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
+renderTripStatus(); renderDayTabs(); renderDay(); renderChecklist(); renderPlanSummary(); updateCurrency();
+if ('serviceWorker' in navigator) {
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!refreshing) { refreshing = true; window.location.reload(); }
+  });
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').then((registration) => registration.update()).catch(() => {}));
+}

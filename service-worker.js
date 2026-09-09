@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fukuoka-travel-toolbox-v1';
+const CACHE_NAME = 'fukuoka-travel-toolbox-v2';
 const APP_SHELL = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
@@ -12,12 +12,22 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
-  event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
-    if (new URL(event.request.url).origin === self.location.origin) {
-      const copy = response.clone();
-      caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+  if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
+  event.respondWith(networkFirst(event.request));
+});
+
+async function networkFirst(request) {
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, response.clone());
     }
     return response;
-  }).catch(() => caches.match('./index.html'))));
-});
+  } catch {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    if (request.mode === 'navigate') return caches.match('./index.html');
+    return Response.error();
+  }
+}
