@@ -157,5 +157,5 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!refreshing) { refreshing = true; window.location.reload(); }
   });
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=2').then((registration) => registration.update()).catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=3').then((registration) => registration.update()).catch(() => {}));
 }
