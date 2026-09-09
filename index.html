@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#143b43" />
+    <meta name="description" content="2026 福岡七天六夜家族旅行工具箱" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f5b98b'/%3E%3Cpath d='M17 38c9-15 20-21 30-25-2 12-6 25-18 34' fill='none' stroke='%23143b43' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='38' cy='20' r='5' fill='%23fff8ef'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>福岡旅箱 · Fukuoka Travel Toolbox</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="回到首頁">
+          <span class="brand-mark">福</span>
+          <span>
+            <strong>福岡旅箱</strong>
+            <small>FUKUOKA / 2026</small>
+          </span>
+        </a>
+        <div class="topbar-meta">
+          <span class="status-dot"></span>
+          <span>行程已整理</span>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero panel-bleed">
+          <div class="hero-copy">
+            <p class="eyebrow">SEVEN DAYS, ONE SLOW CITY</p>
+            <h1>福岡，<em>慢慢走。</em></h1>
+            <p class="hero-description">把海岸、老街與一點遠方，收進同一趟家族旅行。</p>
+            <div class="hero-meta-row">
+              <span><b>09.19</b> → <b>09.25</b></span>
+              <span class="meta-divider"></span>
+              <span>5 位成人</span>
+              <span class="meta-divider"></span>
+              <span>7 天 6 夜</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="sun-disc"></div>
+            <div class="wave wave-one"></div>
+            <div class="wave wave-two"></div>
+            <div class="torii"><span></span><i></i><i></i><b></b></div>
+            <span class="hero-stamp">福岡<br /><small>JAPAN</small></span>
+          </div>
+        </section>
+
+        <section class="quick-stats" aria-label="旅程摘要">
+          <article class="stat-card">
+            <span class="stat-icon coral">✦</span>
+            <div><small>TRIP WINDOW</small><strong>9/19 — 9/25</strong></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon mint">◎</span>
+            <div><small>TRAVEL PARTY</small><strong>5 位成人</strong></div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon blue">⌁</span>
+            <div><small>BASECAMP</small><strong>今泉 → 御供所町</strong></div>
+          </article>
+        </section>
+
+        <section class="view-tabs" role="tablist" aria-label="主要功能">
+          <button class="view-tab active" data-view="itinerary" role="tab" aria-selected="true"><span>日</span>行程</button>
+          <button class="view-tab" data-view="info" role="tab" aria-selected="false"><span>⌂</span>資訊</button>
+          <button class="view-tab" data-view="checklist" role="tab" aria-selected="false"><span>✓</span>清單</button>
+          <button class="view-tab" data-view="tools" role="tab" aria-selected="false"><span>＋</span>工具</button>
+        </section>
+
+        <div class="view-container">
+          <section id="itinerary-view" class="view active" role="tabpanel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">YOUR DAILY EDIT</p>
+                <h2>每天，留一點餘白</h2>
+              </div>
+              <span class="save-pill"><span class="status-dot"></span>自動儲存方案</span>
+            </div>
+            <div id="day-tabs" class="day-tabs" role="tablist" aria-label="選擇日期"></div>
+            <div id="day-content"></div>
+          </section>
+
+          <section id="info-view" class="view" role="tabpanel" hidden>
+            <div class="section-heading">
+              <div><p class="eyebrow">FIELD NOTES</p><h2>旅途中會用到的資訊</h2></div>
+            </div>
+            <div class="info-grid">
+              <article class="info-card info-card-wide flight-card">
+                <div class="card-kicker"><span class="icon-badge coral-bg">✈</span><span>FLIGHTS</span></div>
+                <div class="flight-row"><div><small>出發 · 09/19</small><strong>JX840</strong><span>台北 → 福岡</span></div><b>13:05<br /><small>抵達</small></b></div>
+                <div class="flight-row"><div><small>回程 · 09/25</small><strong>JX841</strong><span>福岡 → 台北</span></div><b>約 14:15<br /><small>以票面為準</small></b></div>
+                <p class="card-note">星宇航空使用福岡機場國際線航廈。回程建議 09:30–10:00 從住宿出發。</p>
+                <a class="text-link" href="https://www.fukuoka-airport.jp/en/flight/airline/JX.html" target="_blank" rel="noreferrer">查看福岡機場航班資訊 ↗</a>
+              </article>
+
+              <article class="info-card">
+                <div class="card-kicker"><span class="icon-badge mint-bg">⌂</span><span>STAYS</span></div>
+                <h3>兩段住宿</h3>
+                <div class="stay-item"><span class="stay-date">09.19—21</span><div><strong>今泉</strong><p>前兩晚，方便天神購物與用餐。</p></div></div>
+                <div class="stay-item"><span class="stay-date">09.21—25</span><div><strong>御供所町 12-1</strong><p>17:00 入住 · 11:00 退房<br />靠近祇園、櫛田神社與博多舊市區。</p></div></div>
+                <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=12-1+Gokushocho+Fukuoka" target="_blank" rel="noreferrer">開啟住宿地圖 ↗</a>
+              </article>
+
+              <article class="info-card">
+                <div class="card-kicker"><span class="icon-badge blue-bg">▣</span><span>LUGGAGE</span></div>
+                <h3>9/21 行李策略</h3>
+                <ol class="compact-list"><li>退房後前往博多站。</li><li>使用 1F 中央驗票口前人工寄放。</li><li>下午 16:00 左右取回，再前往新住宿。</li></ol>
+                <div class="mini-callout"><strong>10:30–18:30</strong><span>官方列示服務時間；出發前再確認。</span></div>
+                <a class="text-link" href="https://www.jrkyushu.co.jp/english/pdf/20231014_teburabaggage.pdf" target="_blank" rel="noreferrer">行李服務說明 ↗</a>
+              </article>
+
+              <article class="info-card info-card-wide route-card">
+                <div class="card-kicker"><span class="icon-badge yellow-bg">↗</span><span>ROUTE LOGIC</span></div>
+                <h3>這趟旅程的移動節奏</h3>
+                <div class="route-steps"><div><b>01</b><span>城市步行<br /><small>天神・博多</small></span></div><i></i><div><b>02</b><span>海岸慢遊<br /><small>糸島</small></span></div><i></i><div><b>03</b><span>遠方一日<br /><small>門司港・柳川</small></span></div></div>
+                <p class="card-note">兩組方案可以分開選擇：第 3 天與第 4 天各自預設 A，不會互相覆蓋。</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="checklist-view" class="view" role="tabpanel" hidden>
+            <div class="section-heading"><div><p class="eyebrow">BEFORE YOU GO</p><h2>出發前，慢慢確認</h2></div><span id="checklist-progress" class="progress-label">0 / 7</span></div>
+            <div id="checklist" class="checklist-card"></div>
+          </section>
+
+          <section id="tools-view" class="view" role="tabpanel" hidden>
+            <div class="section-heading"><div><p class="eyebrow">SMALL HELPERS</p><h2>旅途小工具</h2></div></div>
+            <div class="tools-grid">
+              <article class="tool-card currency-tool"><div class="card-kicker"><span class="icon-badge coral-bg">¥</span><span>QUICK CONVERTER</span></div><h3>日圓小算盤</h3><p>輸入日圓，快速抓一個台幣概念值。</p><label for="yen-input">日圓 JPY</label><input id="yen-input" type="number" inputmode="decimal" value="1000" min="0" /><div class="conversion-result">約 <strong id="twd-result">218</strong> TWD <small>以 0.218 粗估，可自行調整</small></div></article>
+              <article class="tool-card"><div class="card-kicker"><span class="icon-badge mint-bg">↗</span><span>LIVE LINKS</span></div><h3>快速開啟</h3><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Hakata+Station+Fukuoka" target="_blank" rel="noreferrer"><span>博多站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Gion+Station+Fukuoka" target="_blank" rel="noreferrer"><span>祇園站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Futamigaura+Fukuoka" target="_blank" rel="noreferrer"><span>二見ヶ浦地圖</span><b>↗</b></a></article>
+              <article class="tool-card plan-summary"><div class="card-kicker"><span class="icon-badge blue-bg">A/B</span><span>ACTIVE PLANS</span></div><h3>目前選擇</h3><div id="active-plan-summary"></div><p class="card-note">回到「行程」即可切換兩組方案。</p></article>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <nav class="bottom-nav" aria-label="底部導覽">
+        <button class="bottom-nav-item active" data-view="itinerary"><span>日</span><small>行程</small></button>
+        <button class="bottom-nav-item" data-view="info"><span>⌂</span><small>資訊</small></button>
+        <button class="bottom-nav-item" data-view="checklist"><span>✓</span><small>清單</small></button>
+        <button class="bottom-nav-item" data-view="tools"><span>＋</span><small>工具</small></button>
+      </nav>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
