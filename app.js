@@ -18,7 +18,7 @@ const itinerary = {
   }, tips: [['LUGGAGE', '博多站人工寄放列示服務時間 10:30–18:30，出發前再確認。'], ['RECOMMEND', '預設 A；B 適合全員都想把一天留給自然與戶外活動時。']] },
   4: { date: '09.22 TUE', title: '沿著海岸，去看糸島', subtitle: '兩種簡單選擇：自己慢慢看二見浦，或交給一日遊帶路。', badge: 'DAY 04', stay: '御供所町住宿', theme: 'PLAN A / B', plans: {
     A: { name: '公共交通・二見浦', short: '只看代表海岸，節奏最自由', note: '轉乘少、停留自由；重點放在夫婦岩、白色鳥居與海邊咖啡，不再嘗試用公車串遍糸島。', schedule: [['08:50', '前往博多巴士總站', '到 3 樓 32 號乘車處，搭 West Coast Liner；出發前再確認 9/22 假日班表。', 'https://itoshima-now.com/ja/about/access/'], ['10:50', '二見浦・夫婦岩', '海岸散步、白色鳥居與拍照。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['12:00', '海邊咖啡／午餐', '以二見浦周邊店家為主，連假可能排隊，保留替代店家。'], ['14:30', '海岸慢走', '依天氣與體力安排 Palm Beach 一帶。'], ['16:00', '搭車返回博多', '回程約每小時一班且可能塞車；不要為等日落錯過末班車。']] },
-    B: { name: 'Klook／KKday 一日遊', short: '免轉乘，一次走多個郊外景點', note: '適合想看二見浦以外景點、又不想研究公車的人；集合與各站停留時間固定，實際路線以訂單及前一晚通知為準。', schedule: [['08:00', '依訂單前往集合點', '常見為博多站附近；前一天 19:00 後確認通知、語言與集合時間。', 'https://s.klook.com/c/QylzYzRK1b'], ['上午', '糸島郊外景點', '參考行程包含白糸瀑布等公共交通不易抵達的景點，實際停靠依所選方案。'], ['中午', '團體指定午餐點', '參考行程可能安排一蘭之森，餐費與排隊方式以商品說明為準。'], ['下午', '二見浦・海岸景點', '包含夫婦岩、白色鳥居等代表景觀；跟團須準時返回集合點。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['傍晚', '返回福岡市區', '整體約 8 小時，實際解散時間與地點以訂單為準。']] }
+    B: { name: 'Klook／KKday 一日遊', short: '免轉乘，一次走多個郊外景點', note: '適合想看二見浦以外景點、又不想研究公車的人；集合與各站停留時間固定，實際路線以訂單及前一晚通知為準。', schedule: [['08:00', '依訂單前往集合點', '常見為博多站附近；前一天 19:00 後確認通知、語言與集合時間。', 'https://s.klook.com/c/QylzYzRK1b', { map: false, linkLabel: '查看參考行程 ↗' }], ['上午', '糸島郊外景點', '參考行程包含白糸瀑布等公共交通不易抵達的景點，實際停靠依所選方案。', null, { map: false }], ['中午', '團體指定午餐點', '參考行程可能安排一蘭之森，餐費與排隊方式以商品說明為準。', null, { map: false }], ['下午', '二見浦・海岸景點', '包含夫婦岩、白色鳥居等代表景觀；跟團須準時返回集合點。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['傍晚', '返回福岡市區', '整體約 8 小時，實際解散時間與地點以訂單為準。', null, { map: false }]] }
   }, tips: [['PLAN A', '自由、景點少；West Coast Liner 班次有限。'], ['PLAN B', '省轉乘、景點多；先確認 9/22 是否仍有名額。']] },
   5: { date: '09.23 WED', title: '門司港與關門海峽', subtitle: '先把握唐戶市場，再慢慢走老建築與海峽。', badge: 'DAY 05', stay: '御供所町住宿', theme: '遠方一日', schedule: [['07:30', '博多出發', 'JR 前往門司港，三連休最後一天仍要預留人潮。'], ['09:30', '門司港車站・港邊', '先短暫看車站與海港，不在上午停留太久。', 'https://www.mojiko.info/'], ['10:30', '關門汽船 → 唐戶市場', '搭船到下關，趁攤位品項齊全時安排早午餐。', 'https://www.karatoichiba.com/'], ['13:00', '回門司港懷舊區', '下午再走洋風建築；燒咖哩可視食量改成共享或下午茶。'], ['17:30', '返回博多', '晚餐若要吃牛腸鍋建議預約；累了就近簡化。']], tips: [['HOLIDAY', '9/23 為國定假日，唐戶市場活きいき馬関街列示 07:00–15:00，仍可能提早售完。'], ['PACE', '市場不是下午備選，應在中午前優先完成。']] },
   6: { date: '09.24 THU', title: '柳川水路，最後一站太宰府', subtitle: '水面放慢上午，神社收住下午。', badge: 'DAY 06', stay: '御供所町住宿', theme: '水路 × 神社', schedule: [['08:15', '祇園 → 天神／西鐵站', '從住宿出發，預留轉乘、找月台與啟用數位票券的時間。'], ['09:00', '西鐵前往柳川', '使用太宰府・柳川觀光票；同一手機購買多人票時，全員必須一起行動。', 'https://www.nishitetsu.jp/train/digitalkippu/'], ['09:50', '西鐵柳川站報到', '出站後直接到 2 樓案內所；五人建議事先預約 10:10 船班。'], ['10:10', '柳川遊船', '松月乘船場出發，通常約 60 分鐘、單程下船。', 'https://www.yanagawakk.co.jp/index.html'], ['11:30', '鰻魚蒸籠飯', '下船後在御花／沖端一帶午餐，再搭接駁車或計程車回柳川站。'], ['14:00', '前往太宰府', '下午安排太宰府天滿宮與表參道。', 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu'], ['17:40', '返回福岡市區', '回天神／祇園，晚餐就近安排。']], tips: [['RESERVE', '10:10 抵達銜接緊，先預約並到車站案內所報到。'], ['LAST BIG DAY', '這是最後一個完整觀光日，晚上不再排太遠。']] },
@@ -82,11 +82,13 @@ function mapLinkFor(title) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${title} 福岡`)}`;
 }
 
-function scheduleItem([time, title, description, link]) {
+function scheduleItem([time, title, description, link, options = {}]) {
   const isMap = link?.includes('google.com/maps');
   const mapLink = isMap ? link : mapLinkFor(title);
-  const officialLink = link && !isMap ? `<a class="route-link subtle" href="${link}" target="_blank" rel="noreferrer">相關資訊 ↗</a>` : '';
-  return `<div class="schedule-item"><div class="schedule-time" data-time="${time}"></div><div class="schedule-content"><strong>${title}</strong><p>${description}</p><div class="schedule-actions"><a class="route-link" href="${mapLink}" target="_blank" rel="noreferrer">開啟地圖 ↗</a>${officialLink}</div></div></div>`;
+  const mapAction = options.map === false ? '' : `<a class="route-link" href="${mapLink}" target="_blank" rel="noreferrer">開啟地圖 ↗</a>`;
+  const officialLink = link && !isMap ? `<a class="route-link subtle" href="${link}" target="_blank" rel="noreferrer">${options.linkLabel || '相關資訊 ↗'}</a>` : '';
+  const actions = mapAction || officialLink ? `<div class="schedule-actions">${mapAction}${officialLink}</div>` : '';
+  return `<div class="schedule-item"><div class="schedule-time" data-time="${time}"></div><div class="schedule-content"><strong>${title}</strong><p>${description}</p>${actions}</div></div>`;
 }
 
 function renderDay() {
@@ -158,5 +160,5 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!refreshing) { refreshing = true; window.location.reload(); }
   });
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=4').then((registration) => registration.update()).catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=5').then((registration) => registration.update()).catch(() => {}));
 }

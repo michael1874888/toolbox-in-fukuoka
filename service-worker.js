@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fukuoka-travel-toolbox-v4';
+const CACHE_NAME = 'fukuoka-travel-toolbox-v5';
 const APP_SHELL = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
