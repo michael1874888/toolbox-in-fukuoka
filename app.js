@@ -2,10 +2,10 @@ const itinerary = {
   1: { date: '09.19 SAT', title: '抵達福岡，先把城市走熟', subtitle: '下午抵達後不趕景點，先安頓，再從天神開始。', badge: 'DAY 01', stay: '今泉住宿', theme: '城市暖身', schedule: [
     ['13:05', 'JX840 抵達福岡', '國際線入境、領行李；預留入境與進市區時間。', 'https://www.fukuoka-airport.jp/en/flight/airline/JX.html'],
     ['14:30', '國際線 → 今泉', '搭地鐵須先乘免費接駁巴士到國內線，再由福岡空港 K13 至博多 K11，轉七隈線 N18 至藥院 N14；五人有行李可直接分乘計程車。'],
-    ['15:30', '抵達今泉住宿', '放下行李、稍作休息；入住建物為なか庄 2階。'],
-    ['17:00', '天神地下街・PARCO・岩田屋', '把第一天留給逛街與熟悉附近街區。', 'https://www.google.com/maps/search/?api=1&query=Tenjin+Underground+Mall+Fukuoka'],
+    ['15:30', '抵達今泉住宿', '放下行李、稍作休息；完整門牌與建物名稱請查看私人訂房資料。'],
+    ['17:00', '天神地下街・PARCO・岩田屋', '把第一天留給逛街與熟悉附近街區；9/19 或 9/20 經過西鐵福岡（天神）站時，順路一次兌換 5 人份的 9/24 紙本觀光套票。', 'https://www.google.com/maps/search/?api=1&query=Tenjin+Underground+Mall+Fukuoka'],
     ['19:30', '天神拉麵', '晚餐可在 Shin-Shin、Naka-chan 等店家中依現場排隊狀況選擇。']
-  ], tips: [['TODAY’S MOOD', '抵達日留白一點，五人一起行動比較舒服。'], ['DINNER', '第一晚先吃拉麵，不安排跨區移動。']] },
+  ], tips: [['TODAY’S MOOD', '抵達日留白一點，五人一起行動比較舒服。'], ['TICKET', '兌換 9/24 套票時使用 LINKTIVITY 憑證；9/22 糸島一日遊是另一張 Klook 憑證，不需到車站換票。']] },
   2: { date: '09.20 SUN', title: '公園、美術館與百道海風', subtitle: '白天走文化與綠地，傍晚把視線交給海。', badge: 'DAY 02', stay: '今泉住宿', theme: '綠地 × 海岸', schedule: [
     ['09:30', '舞鶴公園・大濠公園', '以公園散步開始，步調慢一點。', 'https://www.google.com/maps/search/?api=1&query=Ohori+Park+Fukuoka'],
     ['11:30', '福岡市美術館', '美術館就在大濠公園內，可順路參觀並安排室內休息。', 'https://www.fukuoka-art-museum.jp/'],
@@ -18,10 +18,10 @@ const itinerary = {
   }, tips: [['LUGGAGE', '博多站人工寄放列示服務時間 10:30–18:30，出發前再確認。'], ['RECOMMEND', '預設 A；B 適合全員都想把一天留給自然與戶外活動時。']] },
   4: { date: '09.22 TUE', title: '沿著海岸，去看糸島', subtitle: '兩種簡單選擇：自己慢慢看二見浦，或交給一日遊帶路。', badge: 'DAY 04', stay: '御供所町住宿', theme: 'PLAN A / B', plans: {
     A: { name: '公共交通・二見浦', short: '只看代表海岸，節奏最自由', note: '轉乘少、停留自由；重點放在夫婦岩、白色鳥居與海邊咖啡，不再嘗試用公車串遍糸島。', schedule: [['08:50', '前往博多巴士總站', '到 3 樓 32 號乘車處，搭 West Coast Liner；出發前再確認 9/22 假日班表。', 'https://itoshima-now.com/ja/about/access/'], ['10:50', '二見浦・夫婦岩', '海岸散步、白色鳥居與拍照。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['12:00', '海邊咖啡／午餐', '以二見浦周邊店家為主，連假可能排隊，保留替代店家。'], ['14:30', '海岸慢走', '依天氣與體力安排 Palm Beach 一帶。'], ['16:00', '搭車返回博多', '回程約每小時一班且可能塞車；不要為等日落錯過末班車。']] },
-    B: { name: 'Klook／KKday 一日遊', short: '免轉乘，一次走多個郊外景點', note: '適合想看二見浦以外景點、又不想研究公車的人；集合與各站停留時間固定，實際路線以訂單及前一晚通知為準。', schedule: [['08:00', '依訂單前往集合點', '常見為博多站附近；前一天 19:00 後確認通知、語言與集合時間。', 'https://s.klook.com/c/QylzYzRK1b', { map: false, linkLabel: '查看參考行程 ↗' }], ['上午', '糸島郊外景點', '參考行程包含白糸瀑布等公共交通不易抵達的景點，實際停靠依所選方案。', null, { map: false }], ['中午', '團體指定午餐點', '參考行程可能安排一蘭之森，餐費與排隊方式以商品說明為準。', null, { map: false }], ['下午', '二見浦・海岸景點', '包含夫婦岩、白色鳥居等代表景觀；跟團須準時返回集合點。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['傍晚', '返回福岡市區', '整體約 8 小時，實際解散時間與地點以訂單為準。', null, { map: false }]] }
-  }, tips: [['PLAN A', '自由、景點少；West Coast Liner 班次有限。'], ['PLAN B', '省轉乘、景點多；先確認 9/22 是否仍有名額。']] },
-  5: { date: '09.23 WED', title: '門司港與關門海峽', subtitle: '先把握唐戶市場，再慢慢走老建築與海峽。', badge: 'DAY 05', stay: '御供所町住宿', theme: '遠方一日', schedule: [['07:30', '博多出發', 'JR 前往門司港，三連休最後一天仍要預留人潮。'], ['09:30', '門司港車站・港邊', '先短暫看車站與海港，不在上午停留太久。', 'https://www.mojiko.info/'], ['10:30', '關門汽船 → 唐戶市場', '搭船到下關，趁攤位品項齊全時安排早午餐。', 'https://www.karatoichiba.com/'], ['13:00', '回門司港懷舊區', '下午再走洋風建築；燒咖哩可視食量改成共享或下午茶。'], ['17:30', '返回博多', '晚餐若要吃牛腸鍋建議預約；累了就近簡化。']], tips: [['HOLIDAY', '9/23 為國定假日，唐戶市場活きいき馬関街列示 07:00–15:00，仍可能提早售完。'], ['PACE', '市場不是下午備選，應在中午前優先完成。']] },
-  6: { date: '09.24 THU', title: '柳川水路，最後一站太宰府', subtitle: '一張觀光套票，順著柳川一路走到太宰府。', badge: 'DAY 06', stay: '御供所町住宿', theme: '水路 × 神社', schedule: [['08:00', '御供所町 → 西鐵福岡（天神）站', '五人建議搭計程車；目的地是西鐵福岡（天神）站，不是 JR 博多站。'], ['08:25', '兌換 Klook 實體套票', '在西鐵站窗口出示 5 人 QR Code，領取紙本觀光套票；不要自行撕票，全程走人工驗票口。', 'https://www.klook.com/zh-TW/activity/152456-dazaifu-yanagawa-excursion-pass-fukuoka/', { map: false, linkLabel: '開啟 Klook 套票 ↗' }], ['09:00', '西鐵特急前往柳川', '搭往大牟田方向、停靠西鐵柳川的列車；西鐵特急不劃位也不另加價。', 'https://www.ensen24.jp/kippu/tc/dazaifu-yanagawa/', { map: false, linkLabel: '查看套票規則 ↗' }], ['09:50', '柳川站遊船服務台', '出站後到案內所出示乘船券，由工作人員安排松月乘船場最近一班共享船。'], ['10:10–11:10', '柳川共享遊船', '套票不保證固定 10:10；一般約每 30 分鐘一班，實際可能安排 10:10、10:40 或 11:10，船程約 60 分鐘、單程下船。', 'https://www.yanagawakk.co.jp/index_e.html', { linkLabel: '查看官方船班 ↗' }], ['11:30', '御花／沖端鰻魚飯', '下船後就近午餐；若超過 13:00，五人直接搭計程車回柳川站，避免等下一班接駁。'], ['13:30', '柳川 → 太宰府', '搭往天神方向列車，在西鐵二日市站內轉太宰府線；不要出站，也不要先返回天神。'], ['14:30', '太宰府天滿宮・表參道', '先參拜，再逛表參道、兌換梅枝餅；部分商店約 17:00 起陸續關門。', 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu'], ['17:00', '返回福岡市區', '太宰府 → 西鐵二日市站內轉乘 → 天神，最後一段仍走人工驗票口。']], tips: [['TICKET', '套票須依「天神 → 柳川 → 太宰府 → 天神」順序使用；紙票交給站員處理。'], ['BOAT', '共享船現場安排班次，09:50 到服務台即可，不再另外購買或預約 10:10 船票。']] },
+    B: { name: 'Klook 糸島一日遊・已預訂', short: '5 人成行，依憑證集合', note: '已預訂 9/22 糸島一日遊；這張憑證不是太宰府・柳川套票，不需到西鐵車站兌換。集合時間、地點與語言以 Klook 訂單及前一晚通知為準。', schedule: [['08:00', '依 Klook 憑證前往集合點', '前一天確認最終通知；全員提早 15 分鐘抵達，現場出示糸島一日遊 QR Code。', 'https://s.klook.com/c/QylzYzRK1b', { map: false, linkLabel: '開啟已訂行程 ↗' }], ['上午', '白糸瀑布・宮地嶽神社', '依當日導遊安排移動；景點順序可能調整。', null, { map: false }], ['中午', '一蘭之森', '用餐內容與費用以商品說明及現場安排為準。', null, { map: false }], ['下午', '二見浦・椰子樹鞦韆', '包含夫婦岩、白色鳥居等代表景觀；每站依導遊指定時間集合。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['傍晚', '返回福岡市區', '整體約 8 小時，道路壅塞時可能延後抵達。', null, { map: false }]] }
+  }, tips: [['PLAN A', '保留為臨時取消時的公共交通備案。'], ['BOOKED', '目前採用 B；5 位成人已完成 Klook 預訂。']] },
+  5: { date: '09.23 WED', title: '門司港與關門海峽', subtitle: '先把握唐戶市場，再慢慢走老建築與海峽。', badge: 'DAY 05', stay: '御供所町住宿', theme: '遠方一日', schedule: [['07:36', '博多 → 小倉｜NOZOMI 8', 'SmartEX 已訂 5 人指定席：2 號車 3A–3E；每人使用各自的 QR-Ticket，進站後拿取 Seat Information。', 'https://smart-ex.jp/en/entraining/qr/', { map: false, linkLabel: '查看 QR 乘車方式 ↗' }], ['07:51', '抵達小倉・轉普通列車', '小倉 → 門司港不含在 SmartEX 車票內，另以 Suica 等交通 IC 卡進出站。'], ['08:30', '門司港 → 唐戶市場', '抵達門司港後先往渡船碼頭，不先逛懷舊區；搭最早能銜接的關門汽船。', 'https://www.karatoichiba.com/'], ['09:00', '唐戶市場早午餐', '9/23 為假日，趁攤位品項齊全時先完成市場行程。'], ['12:00', '回門司港懷舊區', '下午再走洋風建築；燒咖哩可視食量改成共享或下午茶。', 'https://www.mojiko.info/'], ['17:30', '返回博多', '回程如未預訂指定席，依當日人潮提早前往小倉站。']], tips: [['QR × 5', '五個座位各有一張不同的 QR-Ticket；出發前分給每位旅客並離線保存，出站也要再次掃描。'], ['PAPER', '不必提前領紙票；若家人不便使用手機，可自 9/20 起在博多站 EX 售票機一次印出五張。']] },
+  6: { date: '09.24 THU', title: '柳川水路，最後一站太宰府', subtitle: '一張觀光套票，順著柳川一路走到太宰府。', badge: 'DAY 06', stay: '御供所町住宿', theme: '水路 × 神社', schedule: [['08:00', '御供所町 → 西鐵福岡（天神）站', '五人建議搭計程車；目的地是西鐵福岡（天神）站，不是 JR 博多站。'], ['08:25', '確認 5 人紙本套票', '套票已於 9/19 或 9/20 在天神順路領取；確認電車票、乘船券與優惠券都帶齊，不要自行撕票。', 'https://www.klook.com/zh-TW/activity/152456-dazaifu-yanagawa-excursion-pass-fukuoka/', { map: false, linkLabel: '開啟 Klook 套票 ↗' }], ['09:00', '西鐵特急前往柳川', '走人工驗票口，搭往大牟田方向、停靠西鐵柳川的列車；西鐵特急不劃位也不另加價。', 'https://www.ensen24.jp/kippu/tc/dazaifu-yanagawa/', { map: false, linkLabel: '查看套票規則 ↗' }], ['09:50', '柳川站遊船服務台', '出站後到案內所出示乘船券，由工作人員安排松月乘船場最近一班共享船。'], ['10:10–11:10', '柳川共享遊船', '套票不保證固定 10:10；一般約每 30 分鐘一班，實際可能安排 10:10、10:40 或 11:10，船程約 60 分鐘、單程下船。', 'https://www.yanagawakk.co.jp/index_e.html', { linkLabel: '查看官方船班 ↗' }], ['11:30', '御花／沖端鰻魚飯', '下船後就近午餐；若超過 13:00，五人直接搭計程車回柳川站，避免等下一班接駁。'], ['13:30', '柳川 → 太宰府', '搭往天神方向列車，在西鐵二日市站內轉太宰府線；不要出站，也不要先返回天神。'], ['14:30', '太宰府天滿宮・表參道', '先參拜，再逛表參道、兌換梅枝餅；部分商店約 17:00 起陸續關門。', 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu'], ['17:00', '返回福岡市區', '太宰府 → 西鐵二日市站內轉乘 → 天神，最後一段仍走人工驗票口。']], tips: [['EARLY PICKUP', '9/19 或 9/20 經過西鐵福岡（天神）站時，一次兌換全部 5 人份；紙票從兌換日起一個月內有效。'], ['BOAT', '共享船現場安排班次，09:50 到服務台即可，不再另外購買或預約 10:10 船票。']] },
   7: { date: '09.25 FRI', title: '把福岡收進行李', subtitle: '早一點出發，讓回程也保留餘裕。', badge: 'DAY 07', stay: '返程', theme: 'RETURN', schedule: [['08:00', '祇園／博多早餐', '以住宿附近為主，不安排跨區移動。'], ['09:30', '退房並前往福岡機場', '若 JX841 為約 14:15 班次，不建議等到 11:00 才離開。'], ['10:30', '國際線航廈報到', '星宇航空使用福岡機場國際線航廈；預留報到、安檢與行李時間。', 'https://www.fukuoka-airport.jp/en/target/beginner.html'], ['14:15', 'JX841 回台灣', '時間以電子機票與航空公司當日資訊為準。']], tips: [['CHECKOUT', '住宿規定 11:00 退房，但實際離開時間建議提前。'], ['AIRPORT', '五人同行加上行李，建議事先決定計程車／接駁方式。']] }
 };
 
@@ -29,9 +29,10 @@ const checklistItems = [
   ['確認 JX840／JX841 航班時間與護照資料', 'FLIGHT'],
   ['確認第一段今泉住宿的入住與退房時間', 'STAY'],
   ['確認 9/21 博多站人工行李寄放服務', 'LUGGAGE'],
-  ['購買 Klook 太宰府・柳川觀光套票 5 張並保存 QR Code', 'TRANSPORT'],
+  ['9/19 或 9/20 在天神一次兌換 5 人份太宰府・柳川紙本套票', 'TRANSPORT'],
+  ['將 9/23 SmartEX 的 3A–3E QR-Ticket 分給五位旅客', 'SHINKANSEN'],
   ['第 4 天 A：確認 West Coast Liner 假日班表與末班車', 'PLAN A'],
-  ['第 4 天 B：完成 Klook／KKday 一日遊預約', 'PLAN B'],
+  ['確認 9/22 Klook 糸島一日遊的最終集合通知', 'BOOKED'],
   ['下載離線地圖、準備 IC 卡與行動電源', 'ESSENTIAL']
 ];
 
@@ -57,7 +58,7 @@ function getTripContext() {
 const initialTripContext = getTripContext();
 const state = {
   day: initialTripContext.phase === 'during' ? initialTripContext.day : Number(localStorage.getItem('fukuoka-active-day') || 1),
-  plans: { 3: localStorage.getItem('fukuoka-plan-3') || 'A', 4: localStorage.getItem('fukuoka-plan-4') || 'A' },
+  plans: { 3: localStorage.getItem('fukuoka-plan-3') || 'A', 4: localStorage.getItem('fukuoka-plan-4-v7') || 'B' },
   view: 'itinerary'
 };
 
@@ -96,7 +97,7 @@ function renderDay() {
   const selectedPlan = data.plans ? data.plans[state.plans[state.day]] : data;
   const schedule = selectedPlan.schedule || data.schedule;
   $('#day-content').innerHTML = `<article class="day-shell"><header class="day-banner"><div><span class="day-number">${data.date} · ${data.theme}</span><h3>${data.title}</h3><p>${data.subtitle}</p></div><span class="day-badge">${data.badge}</span></header>${data.plans ? planSelector(state.day, data) : ''}<div class="schedule">${schedule.map(scheduleItem).join('')}</div><footer class="day-footer">${(data.tips || []).map(([label, text]) => `<div class="footer-tip"><small>${label}</small><strong>${label === 'RECOMMEND' || label === 'DECISION' ? '目前預設：A' : '記得留意'}</strong><p>${text}</p></div>`).join('')}</footer></article>`;
-  $$('.plan-button').forEach((button) => button.addEventListener('click', () => { const day = Number(button.dataset.planDay); state.plans[day] = button.dataset.plan; localStorage.setItem(`fukuoka-plan-${day}`, button.dataset.plan); renderDay(); renderPlanSummary(); showToast(`第 ${day} 天已切換為 ${button.dataset.plan} 方案`); }));
+  $$('.plan-button').forEach((button) => button.addEventListener('click', () => { const day = Number(button.dataset.planDay); state.plans[day] = button.dataset.plan; localStorage.setItem(day === 4 ? 'fukuoka-plan-4-v7' : `fukuoka-plan-${day}`, button.dataset.plan); renderDay(); renderPlanSummary(); showToast(`第 ${day} 天已切換為 ${button.dataset.plan} 方案`); }));
 }
 
 function renderChecklist() {
@@ -160,5 +161,5 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!refreshing) { refreshing = true; window.location.reload(); }
   });
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=6').then((registration) => registration.update()).catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=7').then((registration) => registration.update()).catch(() => {}));
 }
