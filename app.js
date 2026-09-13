@@ -21,7 +21,7 @@ const itinerary = {
     B: { name: 'Klook／KKday 一日遊', short: '免轉乘，一次走多個郊外景點', note: '適合想看二見浦以外景點、又不想研究公車的人；集合與各站停留時間固定，實際路線以訂單及前一晚通知為準。', schedule: [['08:00', '依訂單前往集合點', '常見為博多站附近；前一天 19:00 後確認通知、語言與集合時間。', 'https://s.klook.com/c/QylzYzRK1b', { map: false, linkLabel: '查看參考行程 ↗' }], ['上午', '糸島郊外景點', '參考行程包含白糸瀑布等公共交通不易抵達的景點，實際停靠依所選方案。', null, { map: false }], ['中午', '團體指定午餐點', '參考行程可能安排一蘭之森，餐費與排隊方式以商品說明為準。', null, { map: false }], ['下午', '二見浦・海岸景點', '包含夫婦岩、白色鳥居等代表景觀；跟團須準時返回集合點。', 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Meotoiwa+Fukuoka'], ['傍晚', '返回福岡市區', '整體約 8 小時，實際解散時間與地點以訂單為準。', null, { map: false }]] }
   }, tips: [['PLAN A', '自由、景點少；West Coast Liner 班次有限。'], ['PLAN B', '省轉乘、景點多；先確認 9/22 是否仍有名額。']] },
   5: { date: '09.23 WED', title: '門司港與關門海峽', subtitle: '先把握唐戶市場，再慢慢走老建築與海峽。', badge: 'DAY 05', stay: '御供所町住宿', theme: '遠方一日', schedule: [['07:30', '博多出發', 'JR 前往門司港，三連休最後一天仍要預留人潮。'], ['09:30', '門司港車站・港邊', '先短暫看車站與海港，不在上午停留太久。', 'https://www.mojiko.info/'], ['10:30', '關門汽船 → 唐戶市場', '搭船到下關，趁攤位品項齊全時安排早午餐。', 'https://www.karatoichiba.com/'], ['13:00', '回門司港懷舊區', '下午再走洋風建築；燒咖哩可視食量改成共享或下午茶。'], ['17:30', '返回博多', '晚餐若要吃牛腸鍋建議預約；累了就近簡化。']], tips: [['HOLIDAY', '9/23 為國定假日，唐戶市場活きいき馬関街列示 07:00–15:00，仍可能提早售完。'], ['PACE', '市場不是下午備選，應在中午前優先完成。']] },
-  6: { date: '09.24 THU', title: '柳川水路，最後一站太宰府', subtitle: '水面放慢上午，神社收住下午。', badge: 'DAY 06', stay: '御供所町住宿', theme: '水路 × 神社', schedule: [['08:15', '祇園 → 天神／西鐵站', '從住宿出發，預留轉乘、找月台與啟用數位票券的時間。'], ['09:00', '西鐵前往柳川', '使用太宰府・柳川觀光票；同一手機購買多人票時，全員必須一起行動。', 'https://www.nishitetsu.jp/train/digitalkippu/'], ['09:50', '西鐵柳川站報到', '出站後直接到 2 樓案內所；五人建議事先預約 10:10 船班。'], ['10:10', '柳川遊船', '松月乘船場出發，通常約 60 分鐘、單程下船。', 'https://www.yanagawakk.co.jp/index.html'], ['11:30', '鰻魚蒸籠飯', '下船後在御花／沖端一帶午餐，再搭接駁車或計程車回柳川站。'], ['14:00', '前往太宰府', '下午安排太宰府天滿宮與表參道。', 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu'], ['17:40', '返回福岡市區', '回天神／祇園，晚餐就近安排。']], tips: [['RESERVE', '10:10 抵達銜接緊，先預約並到車站案內所報到。'], ['LAST BIG DAY', '這是最後一個完整觀光日，晚上不再排太遠。']] },
+  6: { date: '09.24 THU', title: '柳川水路，最後一站太宰府', subtitle: '一張觀光套票，順著柳川一路走到太宰府。', badge: 'DAY 06', stay: '御供所町住宿', theme: '水路 × 神社', schedule: [['08:00', '御供所町 → 西鐵福岡（天神）站', '五人建議搭計程車；目的地是西鐵福岡（天神）站，不是 JR 博多站。'], ['08:25', '兌換 Klook 實體套票', '在西鐵站窗口出示 5 人 QR Code，領取紙本觀光套票；不要自行撕票，全程走人工驗票口。', 'https://www.klook.com/zh-TW/activity/152456-dazaifu-yanagawa-excursion-pass-fukuoka/', { map: false, linkLabel: '開啟 Klook 套票 ↗' }], ['09:00', '西鐵特急前往柳川', '搭往大牟田方向、停靠西鐵柳川的列車；西鐵特急不劃位也不另加價。', 'https://www.ensen24.jp/kippu/tc/dazaifu-yanagawa/', { map: false, linkLabel: '查看套票規則 ↗' }], ['09:50', '柳川站遊船服務台', '出站後到案內所出示乘船券，由工作人員安排松月乘船場最近一班共享船。'], ['10:10–11:10', '柳川共享遊船', '套票不保證固定 10:10；一般約每 30 分鐘一班，實際可能安排 10:10、10:40 或 11:10，船程約 60 分鐘、單程下船。', 'https://www.yanagawakk.co.jp/index_e.html', { linkLabel: '查看官方船班 ↗' }], ['11:30', '御花／沖端鰻魚飯', '下船後就近午餐；若超過 13:00，五人直接搭計程車回柳川站，避免等下一班接駁。'], ['13:30', '柳川 → 太宰府', '搭往天神方向列車，在西鐵二日市站內轉太宰府線；不要出站，也不要先返回天神。'], ['14:30', '太宰府天滿宮・表參道', '先參拜，再逛表參道、兌換梅枝餅；部分商店約 17:00 起陸續關門。', 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu'], ['17:00', '返回福岡市區', '太宰府 → 西鐵二日市站內轉乘 → 天神，最後一段仍走人工驗票口。']], tips: [['TICKET', '套票須依「天神 → 柳川 → 太宰府 → 天神」順序使用；紙票交給站員處理。'], ['BOAT', '共享船現場安排班次，09:50 到服務台即可，不再另外購買或預約 10:10 船票。']] },
   7: { date: '09.25 FRI', title: '把福岡收進行李', subtitle: '早一點出發，讓回程也保留餘裕。', badge: 'DAY 07', stay: '返程', theme: 'RETURN', schedule: [['08:00', '祇園／博多早餐', '以住宿附近為主，不安排跨區移動。'], ['09:30', '退房並前往福岡機場', '若 JX841 為約 14:15 班次，不建議等到 11:00 才離開。'], ['10:30', '國際線航廈報到', '星宇航空使用福岡機場國際線航廈；預留報到、安檢與行李時間。', 'https://www.fukuoka-airport.jp/en/target/beginner.html'], ['14:15', 'JX841 回台灣', '時間以電子機票與航空公司當日資訊為準。']], tips: [['CHECKOUT', '住宿規定 11:00 退房，但實際離開時間建議提前。'], ['AIRPORT', '五人同行加上行李，建議事先決定計程車／接駁方式。']] }
 };
 
@@ -29,7 +29,7 @@ const checklistItems = [
   ['確認 JX840／JX841 航班時間與護照資料', 'FLIGHT'],
   ['確認第一段今泉住宿的入住與退房時間', 'STAY'],
   ['確認 9/21 博多站人工行李寄放服務', 'LUGGAGE'],
-  ['購買或確認柳川＋太宰府交通／遊船票券', 'TRANSPORT'],
+  ['購買 Klook 太宰府・柳川觀光套票 5 張並保存 QR Code', 'TRANSPORT'],
   ['第 4 天 A：確認 West Coast Liner 假日班表與末班車', 'PLAN A'],
   ['第 4 天 B：完成 Klook／KKday 一日遊預約', 'PLAN B'],
   ['下載離線地圖、準備 IC 卡與行動電源', 'ESSENTIAL']
@@ -160,5 +160,5 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!refreshing) { refreshing = true; window.location.reload(); }
   });
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=5').then((registration) => registration.update()).catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=6').then((registration) => registration.update()).catch(() => {}));
 }

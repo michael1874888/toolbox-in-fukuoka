@@ -7,7 +7,7 @@
     <meta name="description" content="2026 福岡七天六夜家族旅行工具箱" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f5b98b'/%3E%3Cpath d='M17 38c9-15 20-21 30-25-2 12-6 25-18 34' fill='none' stroke='%23143b43' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='38' cy='20' r='5' fill='%23fff8ef'/%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=5" />
+    <link rel="stylesheet" href="./styles.css?v=6" />
     <title>福岡旅箱 · Fukuoka Travel Toolbox</title>
   </head>
   <body>
@@ -116,7 +116,7 @@
               <article class="info-card info-card-wide ticket-card">
                 <div class="card-kicker"><span class="icon-badge yellow-bg">▢</span><span>BEFORE YOU LEAVE</span></div>
                 <h3>出發前只要確認這三件事</h3>
-                <ol class="compact-list"><li>9/21 博多站人工行李寄放服務是否照常。</li><li>9/22 選 A 就確認 West Coast Liner 假日班表；選 B 就完成 Klook／KKday 預約。</li><li>預約 9/24 柳川 10:10 遊船，並先準備西鐵數位票券。</li></ol>
+                <ol class="compact-list"><li>9/21 博多站人工行李寄放服務是否照常。</li><li>9/22 選 A 就確認 West Coast Liner 假日班表；選 B 就完成 Klook／KKday 預約。</li><li>購買 9/24 Klook 太宰府・柳川觀光套票 5 張，並離線保存兌換 QR Code。</li></ol>
                 <p class="card-note">其他事情留給 Google Maps 與現場彈性，不把 APP 塞成旅遊百科。</p>
               </article>
             </div>
@@ -131,7 +131,7 @@
             <div class="section-heading"><div><p class="eyebrow">SMALL HELPERS</p><h2>旅途小工具</h2></div></div>
             <div class="tools-grid">
               <article class="tool-card currency-tool"><div class="card-kicker"><span class="icon-badge coral-bg">¥</span><span>QUICK CONVERTER</span></div><h3>日圓小算盤</h3><p>輸入金額，快速抓一個台幣概念值。</p><div class="currency-fields"><div><label for="yen-input">日圓 JPY</label><input id="yen-input" type="number" inputmode="decimal" value="1000" min="0" /></div><div><label for="rate-input">1 JPY ≈ TWD</label><input id="rate-input" type="number" inputmode="decimal" value="0.218" min="0" step="0.001" /></div></div><div class="conversion-result">約 <strong id="twd-result">218</strong> TWD <small id="rate-caption">手動匯率會保存在這台裝置</small></div></article>
-              <article class="tool-card"><div class="card-kicker"><span class="icon-badge mint-bg">↗</span><span>LIVE LINKS</span></div><h3>快速開啟</h3><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Hakata+Station+Fukuoka" target="_blank" rel="noreferrer"><span>博多站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Gion+Station+Fukuoka" target="_blank" rel="noreferrer"><span>祇園站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Fukuoka" target="_blank" rel="noreferrer"><span>二見浦地圖</span><b>↗</b></a><a class="quick-link" href="https://s.klook.com/c/QylzYzRK1b" target="_blank" rel="noreferrer"><span>糸島一日遊參考</span><b>↗</b></a></article>
+              <article class="tool-card"><div class="card-kicker"><span class="icon-badge mint-bg">↗</span><span>LIVE LINKS</span></div><h3>快速開啟</h3><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Hakata+Station+Fukuoka" target="_blank" rel="noreferrer"><span>博多站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Gion+Station+Fukuoka" target="_blank" rel="noreferrer"><span>祇園站地圖</span><b>↗</b></a><a class="quick-link" href="https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura+Fukuoka" target="_blank" rel="noreferrer"><span>二見浦地圖</span><b>↗</b></a><a class="quick-link" href="https://s.klook.com/c/QylzYzRK1b" target="_blank" rel="noreferrer"><span>糸島一日遊參考</span><b>↗</b></a><a class="quick-link" href="https://www.klook.com/zh-TW/activity/152456-dazaifu-yanagawa-excursion-pass-fukuoka/" target="_blank" rel="noreferrer"><span>太宰府・柳川觀光套票</span><b>↗</b></a></article>
               <article class="tool-card plan-summary"><div class="card-kicker"><span class="icon-badge blue-bg">A/B</span><span>ACTIVE PLANS</span></div><h3>目前選擇</h3><div id="active-plan-summary"></div><p class="card-note">回到「行程」即可切換兩組方案。</p></article>
             </div>
           </section>
@@ -146,6 +146,6 @@
       </nav>
       <div id="toast" class="toast" role="status" aria-live="polite"></div>
     </div>
-    <script src="./app.js?v=5"></script>
+    <script src="./app.js?v=6"></script>
   </body>
 </html>
